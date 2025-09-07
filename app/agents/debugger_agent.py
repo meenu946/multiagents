@@ -1,8 +1,6 @@
-from app.utils.api_clients import call_openai
+from app.utils.api_clients import call_gemini
 
 class DebuggerAgent:
     def run(self, code: str) -> str:
-        if not code.strip():
-            return "🐞 Debugger: No code provided."
-        prompt = f"Debug the following Python code and suggest improvements or fixes:\n{code}"
-        return call_openai(prompt)
+        prompt = f"Find bugs and improvements in this Python code:\n{code}"
+        return call_gemini(prompt)

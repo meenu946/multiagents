@@ -1,6 +1,6 @@
-from app.utils.api_clients import call_openai
+from app.utils.api_clients import call_gemini
 
 class ContentAgent:
     def run(self, doubt: str) -> str:
-        prompt = f"Create 3 quiz questions based on this programming topic:\n{doubt}"
-        return call_openai(prompt)
+        prompt = f"Generate quiz questions based on the topic: {doubt}"
+        return call_gemini(prompt)

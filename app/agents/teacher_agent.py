@@ -1,6 +1,6 @@
-from app.utils.api_clients import call_openai
+from app.utils.api_clients import call_gemini
 
 class TeacherAgent:
     def run(self, doubt: str) -> str:
-        prompt = f"Explain the following coding doubt in simple terms for a beginner:\n{doubt}"
-        return call_openai(prompt)
+        prompt = f"Explain this coding doubt clearly: {doubt}"
+        return call_gemini(prompt)

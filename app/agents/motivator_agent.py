@@ -1,10 +1,6 @@
-import random
+from app.utils.api_clients import call_gemini
 
 class MotivatorAgent:
     def run(self) -> str:
-        messages = [
-            "🚀 Keep going, you’re doing amazing!",
-            "💡 Every doubt you solve makes you stronger.",
-            "🔥 Great effort! You’re one step closer to mastery.",
-        ]
-        return random.choice(messages)
+        prompt = "Provide a motivational message for a learner facing difficulties."
+        return call_gemini(prompt)
