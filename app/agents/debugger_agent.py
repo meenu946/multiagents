@@ -1,5 +1,8 @@
+from app.utils.api_clients import call_openai
+
 class DebuggerAgent:
     def run(self, code: str) -> str:
-        if not code:
+        if not code.strip():
             return "🐞 Debugger: No code provided."
-        return "🐞 Debugger: I analyzed your code and suggest this fix..."
+        prompt = f"Debug the following Python code and suggest improvements or fixes:\n{code}"
+        return call_openai(prompt)
