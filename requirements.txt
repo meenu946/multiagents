@@ -1,6 +1,19 @@
+# Backend
 fastapi
-uvicorn
+uvicorn[standard]
 pydantic
-openai
-streamlit
 python-dotenv
+requests
+httpx
+typing-extensions
+
+# Frontend
+streamlit
+
+
+google-generativeai 
+# Testing
+pytest
+
+# Utilities
+rich  # optional, for colorful logging or debug
